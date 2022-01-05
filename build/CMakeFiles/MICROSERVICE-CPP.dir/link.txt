@@ -1,2 +1,0 @@
-D:/360Downloads/mingw64/bin/ar.exe qc libMICROSERVICE-CPP.a  CMakeFiles/MICROSERVICE-CPP.dir/MICROSERVICE-CPP.cpp.obj
-D:/360Downloads/mingw64/bin/ranlib.exe libMICROSERVICE-CPP.a

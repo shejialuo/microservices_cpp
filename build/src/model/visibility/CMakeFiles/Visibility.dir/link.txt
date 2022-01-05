@@ -1,2 +1,0 @@
-D:/360Downloads/mingw64/bin/ar.exe qc ../../../../lib/libVisibility.a  CMakeFiles/Visibility.dir/Visibility.cpp.obj
-D:/360Downloads/mingw64/bin/ranlib.exe ../../../../lib/libVisibility.a

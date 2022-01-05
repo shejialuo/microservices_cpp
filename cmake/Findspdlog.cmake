@@ -1,0 +1,10 @@
+find_path(spdlog_INCLUDE_FLAG spdlog.h HINTS "${PROJECT_SOURCE_DIR}/dependency/spdlog/spdlog/include/spdlog/")
+
+if(spdlog_INCLUDE_FLAG)
+  set(SPDLOG_FOUND TRUE)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DASIO_STANDALONE=YES")
+  set(spdlog_INCLUDE "${PROJECT_SOURCE_DIR}/dependency/spdlog/spdlog/include/")
+  message( STATUS "Found SPDLOG include at: ${spdlog_INCLUDE}")
+else()
+  message(FATAL_ERROR "Failed to locate SPDLOG dependency.")
+endif()
