@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Project/microservice-cpp/src/model/protocol/protocol.cpp
+iostream
+-
+stdio.h
+-
+protocol.h
+D:/Project/microservice-cpp/src/model/protocol/protocol.h
+
+D:/Project/microservice-cpp/src/model/protocol/protocol.h
+

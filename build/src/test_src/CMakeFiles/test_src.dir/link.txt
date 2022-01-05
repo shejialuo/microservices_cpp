@@ -1,0 +1,2 @@
+D:/360Downloads/mingw64/bin/ar.exe qc ../../../lib/libtest_src.a  CMakeFiles/test_src.dir/add.cpp.obj CMakeFiles/test_src.dir/sub.cpp.obj
+D:/360Downloads/mingw64/bin/ranlib.exe ../../../lib/libtest_src.a

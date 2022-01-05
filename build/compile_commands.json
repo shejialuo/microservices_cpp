@@ -1,0 +1,42 @@
+[
+{
+  "directory": "D:/Project/microservice-cpp/build/src/test_src",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe   @CMakeFiles/test_src.dir/includes_CXX.rsp -g   -o CMakeFiles/test_src.dir/add.cpp.obj -c D:/Project/microservice-cpp/src/test_src/add.cpp",
+  "file": "D:/Project/microservice-cpp/src/test_src/add.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/test_src",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe   @CMakeFiles/test_src.dir/includes_CXX.rsp -g   -o CMakeFiles/test_src.dir/sub.cpp.obj -c D:/Project/microservice-cpp/src/test_src/sub.cpp",
+  "file": "D:/Project/microservice-cpp/src/test_src/sub.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/mysqltool",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe  -Dmysqltool_EXPORTS @CMakeFiles/mysqltool.dir/includes_CXX.rsp -g   -o CMakeFiles/mysqltool.dir/MySQLManager.cpp.obj -c D:/Project/microservice-cpp/src/mysqltool/MySQLManager.cpp",
+  "file": "D:/Project/microservice-cpp/src/mysqltool/MySQLManager.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/main",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe   @CMakeFiles/demo.dir/includes_CXX.rsp -g   -o CMakeFiles/demo.dir/main.cpp.obj -c D:/Project/microservice-cpp/src/main/main.cpp",
+  "file": "D:/Project/microservice-cpp/src/main/main.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/model",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe  -Dservice_EXPORTS @CMakeFiles/service.dir/includes_CXX.rsp -g   -o CMakeFiles/service.dir/Service.cpp.obj -c D:/Project/microservice-cpp/src/model/Service.cpp",
+  "file": "D:/Project/microservice-cpp/src/model/Service.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/model",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe  -Dservice_EXPORTS @CMakeFiles/service.dir/includes_CXX.rsp -g   -o CMakeFiles/service.dir/ServiceInstance.cpp.obj -c D:/Project/microservice-cpp/src/model/ServiceInstance.cpp",
+  "file": "D:/Project/microservice-cpp/src/model/ServiceInstance.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/model/visibility",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe   @CMakeFiles/Visibility.dir/includes_CXX.rsp -g   -o CMakeFiles/Visibility.dir/Visibility.cpp.obj -c D:/Project/microservice-cpp/src/model/visibility/Visibility.cpp",
+  "file": "D:/Project/microservice-cpp/src/model/visibility/Visibility.cpp"
+},
+{
+  "directory": "D:/Project/microservice-cpp/build/src/model/protocol",
+  "command": "D:/360Downloads/mingw64/bin/x86_64-w64-mingw32-g++.exe   @CMakeFiles/Protocol.dir/includes_CXX.rsp -g   -o CMakeFiles/Protocol.dir/protocol.cpp.obj -c D:/Project/microservice-cpp/src/model/protocol/protocol.cpp",
+  "file": "D:/Project/microservice-cpp/src/model/protocol/protocol.cpp"
+}
+]
