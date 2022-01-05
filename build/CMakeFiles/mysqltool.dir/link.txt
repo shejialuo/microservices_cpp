@@ -1,0 +1,2 @@
+D:/360Downloads/mingw64/bin/ar.exe qc ../lib/libmysqltool.a  CMakeFiles/mysqltool.dir/MySQLManager.cpp.obj
+D:/360Downloads/mingw64/bin/ranlib.exe ../lib/libmysqltool.a
