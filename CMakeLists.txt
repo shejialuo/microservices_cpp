@@ -1,43 +1,41 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(MICROSERVICE-CPP VERSION 0.1.0)
+project("Microservices-cpp" VERSION 1.0.0 LANGUAGES CXX)
 
-include(CTest)
-enable_testing()
+#
+# 编译选项
+#
 
+option(BUILD_TESTS "Build unit tests." ON)
 
-#主要配置
-include_directories(${PROJECT_SOURCE_DIR}\\include)  #include文件夹位置
-link_directories(${PROJECT_SOURCE_DIR}\\lib) #lib文件夹位置
-link_libraries(libmysql)  #lib下dll文件名
+#
+# 配置
+#
 
- #与本次配置无关，一般由项目自动生成（注意要在引入文件夹的下面）
-# add_executable(demo main.cpp) 
-add_subdirectory(src)
+set(CMAKE_CXX_STANDARD 11)
+set(INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+set(SOURCE_DIR  "${PROJECT_SOURCE_DIR}/src")
 
+# Windows MSVC 编译器
+if(CMAKE_CXX_COMPILER_ID STREQUAL MSVC)
+  set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /D_WIN32_WINNT=0x0601 /W4 /wd4068 /wd4702 /wd4996 /wd4265" )
+endif()
 
+# 除了windows的平台
+if(NOT WIN32)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Weffc++ -pedantic -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-non-virtual-dtor")
+endif()
 
-# set(MYSQL_SRC
-# MySQLManager.cpp
-# )
+# 设置CMake Module的查找路径
+set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake" )
 
-# # SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
-# # add_library(mysqltool ${MYSQL_SRC})
+# 寻找日志库的外部依赖
+find_package(spdlog REQUIRED)
 
-# set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+include_directories(${INCLUDE_DIR} SYSTEM ${spdlog_INCLUDE} 
+                    ${mysql_INCLUDE})
 
-# link_directories(.) # 从当前目录中寻找链接文件
-# add_executable(demo main.cpp MySQLManager.cpp MySQLManager.h)
-# #主要配置第一个参数为项目名
-# #为 target 添加需要链接的库，target可以是可执行文件，也可以是库文件
-# # TARGET_LINK_LIBRARIES(demo test_src)
-# # TARGET_LINK_LIBRARIES(demo mysqltool)
+if(BUILD_TESTS)
+  enable_testing()
+endif()
 
-# TARGET_LINK_LIBRARIES(demo libmysql.dll)
-
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
-
-
-
+add_executable(main src/main.cpp)
