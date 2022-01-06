@@ -31,11 +31,11 @@ set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake" )
 # 寻找日志库的外部依赖
 find_package(spdlog REQUIRED)
 
-include_directories(${INCLUDE_DIR} SYSTEM ${spdlog_INCLUDE} 
-                    ${mysql_INCLUDE})
+include_directories(${INCLUDE_DIR} SYSTEM ${spdlog_INCLUDE})
 
 if(BUILD_TESTS)
   enable_testing()
 endif()
 
-add_executable(main src/main.cpp)
+aux_source_directory(${SOURCE_DIR} ALL_SRC)
+add_executable(main ${ALL_SRC})
